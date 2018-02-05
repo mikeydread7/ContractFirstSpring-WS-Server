@@ -7,7 +7,7 @@ import com.example.demo.ws.repository.CrmRepository;
 
 @Service("crmService")
 public class CrmService {
-	 private CrmRepository crmRepository;
+	private CrmRepository crmRepository;
 	
 	public CrmService(CrmRepository crmRepository) {
 	
@@ -15,7 +15,6 @@ public class CrmService {
 	}
 
 	public Customer findCustomerByIdRequest(String id) {
-		// TODO Auto-generated method stub
 		return this.crmRepository.findCustomerByIdRequest(id);
 	}
 

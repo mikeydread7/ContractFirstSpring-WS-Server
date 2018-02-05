@@ -26,6 +26,7 @@
             <xs:element name="email" type="xs:string"/>
             <xs:element name="notes"  type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="phone"  type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="demography" type="tns:demography"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -33,9 +34,16 @@
         <xs:restriction base="xs:string">
             <xs:length value="5"/>
             <xs:pattern value="[0-9]+"/>
-            
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="demography">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ASIAN"/>
+            <xs:enumeration value="BLACK"/>
+            <xs:enumeration value="WHITE"/>
+             <xs:enumeration value="OTHER"/>
+        </xs:restriction>
+        </xs:simpleType>
 </xs:schema>
 
 <!-- 

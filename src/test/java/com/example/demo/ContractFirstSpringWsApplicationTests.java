@@ -2,8 +2,6 @@ package com.example.demo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.List;
-
 import org.example.crm.GetCustomerByIdRequest;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -17,8 +15,6 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.ClassUtils;
 import org.springframework.ws.client.core.WebServiceTemplate;
-
-import com.google.common.base.Joiner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -40,8 +36,13 @@ public class ContractFirstSpringWsApplicationTests {
 		WebServiceTemplate ws = new WebServiceTemplate(marshaller);
 		GetCustomerByIdRequest request = new GetCustomerByIdRequest();
 		request.setId("20202");
-
 		assertThat(ws.marshalSendAndReceive("http://localhost:" + port + "/ws", request)).isNotNull();
+	}	
+	
+	@Test
+	public void testSendAndReceiveCompanyCustonerJpa() {
+		
+		
 	}	
 	
 }
