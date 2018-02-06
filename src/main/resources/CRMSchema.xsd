@@ -1,54 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema targetNamespace="http://www.example.org/crm"
-		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
- 	    	xmlns:tns="http://www.example.org/crm" elementFormDefault="qualified">
-    
-    <xs:element name="getCustomerByIdRequest">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="id"  type="tns:customerIdType"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/crm"
+	elementFormDefault="qualified">
+	<xs:element name="getCustomerByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="tns:customerIdType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 
-    <xs:element name="getCustomerByIdResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="customer" type="tns:customer"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+	<xs:element name="getCustomerByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="customer" type="tns:customer" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 
-    <xs:complexType name="customer">
-        <xs:sequence>
-            <xs:element name="customerId" type="tns:customerIdType"/>
-            <xs:element name="companyName"  type="xs:string"/>
-            <xs:element name="email" type="xs:string"/>
-            <xs:element name="notes"  type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="phone"  type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="demography" type="tns:demography"/>
-        </xs:sequence>
-    </xs:complexType>
+	<xs:complexType name="customer">
+		<xs:sequence>
+			<xs:element name="customerId" type="tns:customerIdType" />
+			<xs:element name="companyProductId" type="xs:long" />
+			<xs:element name="companyName" type="xs:string" />
+			<xs:element name="customerName" type="xs:string" />
+			<xs:element name="email" type="xs:string" />
+			<xs:element name="notes" type="xs:string" minOccurs="0" maxOccurs="1" />
+			<xs:element name="phone" type="xs:string" minOccurs="0"	maxOccurs="1" />
+			<xs:element name="date" type="xs:dateTime" />
+			<xs:element name="demography" type="tns:demography" />
+		</xs:sequence>
+	</xs:complexType>
 
-    <xs:simpleType name="customerIdType">
-        <xs:restriction base="xs:string">
-            <xs:length value="5"/>
-            <xs:pattern value="[0-9]+"/>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="demography">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="ASIAN"/>
-            <xs:enumeration value="BLACK"/>
-            <xs:enumeration value="WHITE"/>
-             <xs:enumeration value="OTHER"/>
-        </xs:restriction>
-        </xs:simpleType>
+	<xs:simpleType name="customerIdType">
+		<xs:restriction base="xs:string">
+			<xs:length value="5" />
+			<xs:pattern value="[0-9]+" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="demography">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ASIAN" />
+			<xs:enumeration value="BLACK" />
+			<xs:enumeration value="WHITE" />
+			<xs:enumeration value="OTHER" />
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
 
-<!-- 
-<getCustomerByIdRequest>
-<id>202002</id>
-</getCustomerByIdRequest>
- -->
+<!-- <getCustomerByIdRequest> <id>202002</id> </getCustomerByIdRequest> -->
  

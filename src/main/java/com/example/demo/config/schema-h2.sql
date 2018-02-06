@@ -76,30 +76,3 @@ select cc.customer_id from  COMPANY_CUSTOMERS cc, COMPANY_PRODUCTS cp  where tri
 (select cp.company_product_id from  COMPANY_PRODUCTS cp where  trim(cp. customer_product_name) = 'Cheese Rolls' )
 );
 
--- insert test record 3
-insert into COMPANY_PRODUCTS values(company_product_id_seq.nextval,'Cheese Sticks', sysdate-1);
-insert into COMPANY_CUSTOMERS values(customer_id_seq.nextval,'Donold Foobart',
-(select cp.company_product_id from  COMPANY_PRODUCTS cp where  trim(cp. customer_product_name) = 'Cheese Sticks'), '415-223-6000','I Love it yep','Your Company Inc','WHITE','meandyou@hotmail.com', sysdate);
--- corelate the reocords
-insert into COMPANY_RELATION_MANAGEMENT  
-values(
-(
-select max(cc.customer_id) from  COMPANY_CUSTOMERS cc, COMPANY_PRODUCTS cp  where trim(cp. customer_product_name) = 'Cheese Sticks'   and cc.phone='415-223-6000'
-),
-
-(select cp.company_product_id from  COMPANY_PRODUCTS cp where  trim(cp. customer_product_name) = 'Cheese Sticks' )
-);
-
--- insert test record 4
-insert into COMPANY_PRODUCTS values(company_product_id_seq.nextval,'Straws', sysdate-1);
-insert into COMPANY_CUSTOMERS values(customer_id_seq.nextval,'Jack Maxton',
-(select cp.company_product_id from  COMPANY_PRODUCTS cp where  trim(cp. customer_product_name) = 'Straws'), '715-133-6000','I Love it yep','Your Company Inc','BLACK','themandus@hotmail.com', sysdate);
--- corelate the reocords
-insert into COMPANY_RELATION_MANAGEMENT  
-values(
-(
-select max(cc.customer_id) from  COMPANY_CUSTOMERS cc, COMPANY_PRODUCTS cp  where trim(cp. customer_product_name) = 'Straws'   and cc.phone='715-133-6000'
-),
-
-(select cp.company_product_id from  COMPANY_PRODUCTS cp where  trim(cp. customer_product_name) = 'Straws' )
-);

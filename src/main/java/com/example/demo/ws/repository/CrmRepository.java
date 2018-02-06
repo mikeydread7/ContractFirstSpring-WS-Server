@@ -1,16 +1,20 @@
 package com.example.demo.ws.repository;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.example.crm.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
+
+import com.example.demo.ws.util.DateFormat;
 
 @Component
 public class CrmRepository {
@@ -24,7 +28,8 @@ public class CrmRepository {
 		cm.setEmail("me.you@foo.com");
 		cm.setNotes("I Love Jesus");
 		cm.setPhone("800-900-8000");
-		cm.setCustomerId("20202");//20202
+		cm.setDate(DateFormat.getXMLGregorianCalendarDate(new Date()));
+		cm.setCustomerId("20202");// 20202
 		cm.setCompanyName("Burger King");
 		customers.put("20202", cm);
 		log.debug("- - - initializing complete ..");
@@ -41,7 +46,7 @@ public class CrmRepository {
 		Assert.notNull(id, "The customer's id must not be null");
 		log.debug("- - - Customer id not found ..");
 		return customers.get(id);
-		
+
 	}
 
 }

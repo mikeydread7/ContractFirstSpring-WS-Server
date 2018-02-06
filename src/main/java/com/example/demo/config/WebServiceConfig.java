@@ -1,6 +1,5 @@
 package com.example.demo.config;
 
-
 import java.util.Properties;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -22,7 +21,7 @@ import com.example.demo.ws.Exception.ServiceFaultException;
 
 @EnableWs
 @Configuration
-public class WebServiceConfig  extends WsConfigurerAdapter {
+public class WebServiceConfig extends WsConfigurerAdapter {
 	@Bean
 	public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
@@ -30,22 +29,23 @@ public class WebServiceConfig  extends WsConfigurerAdapter {
 		servlet.setTransformWsdlLocations(true);
 		return new ServletRegistrationBean(servlet, "/ws/*");
 	}
+
 	@Bean
-    public SoapFaultMappingExceptionResolver exceptionResolver(){
-        SoapFaultMappingExceptionResolver exceptionResolver = new DetailSoapFaultDefinitionExceptionResolver();
+	public SoapFaultMappingExceptionResolver exceptionResolver() {
+		SoapFaultMappingExceptionResolver exceptionResolver = new DetailSoapFaultDefinitionExceptionResolver();
 
-        SoapFaultDefinition faultDefinition = new SoapFaultDefinition();
-        faultDefinition.setFaultCode(SoapFaultDefinition.SERVER);
-        exceptionResolver.setDefaultFault(faultDefinition);
+		SoapFaultDefinition faultDefinition = new SoapFaultDefinition();
+		faultDefinition.setFaultCode(SoapFaultDefinition.SERVER);
+		exceptionResolver.setDefaultFault(faultDefinition);
 
-        Properties errorMappings = new Properties();
-        errorMappings.setProperty(Exception.class.getName(), SoapFaultDefinition.SERVER.toString());
-        errorMappings.setProperty(ServiceFaultException.class.getName(), SoapFaultDefinition.SERVER.toString());
-        exceptionResolver.setExceptionMappings(errorMappings);
-        exceptionResolver.setOrder(1);
-        return exceptionResolver;
-    }
-		
+		Properties errorMappings = new Properties();
+		errorMappings.setProperty(Exception.class.getName(), SoapFaultDefinition.SERVER.toString());
+		errorMappings.setProperty(ServiceFaultException.class.getName(), SoapFaultDefinition.SERVER.toString());
+		exceptionResolver.setExceptionMappings(errorMappings);
+		exceptionResolver.setOrder(1);
+		return exceptionResolver;
+	}
+
 	@Bean(name = "crm")
 	public DefaultWsdl11Definition crmWsdl11Definition(XsdSchema crmSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
