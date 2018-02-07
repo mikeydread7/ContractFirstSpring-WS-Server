@@ -8,8 +8,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-    
-
 	<name>ContractFirstSpring-WS</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -41,8 +39,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
-       <!-- Spring data JPA, default tomcat pool, exclude it -->
-        
+       <!-- Spring data JPA, default tomcat pool, exclude it -->        
 		<dependency>
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
@@ -59,7 +56,6 @@
 			<artifactId>guava</artifactId>
 			<version>19.0</version>
 		</dependency>
-		
 		<!-- Oracle JDBC driver  ojdbc6.jar example-->
         <dependency>
             <groupId>com.oracle</groupId>
@@ -71,7 +67,6 @@
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
 		</dependency>
- 
         <!-- H2 Database -->
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -89,7 +84,6 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>

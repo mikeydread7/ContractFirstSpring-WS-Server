@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.example.crm.Customer;
+import org.example.crm.Demography;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -27,6 +28,7 @@ public class CrmRepository {
 		cm.setEmail("me.you@foo.com");
 		cm.setNotes("I Love Jesus");
 		cm.setPhone("800-900-8000");
+		cm.setDemography(Demography.OTHER);
 		cm.setDate(DateFormat.getXMLGregorianCalendarDate(new Date()));
 		cm.setCustomerId("20202");// 20202
 		cm.setCompanyName("Burger King");
