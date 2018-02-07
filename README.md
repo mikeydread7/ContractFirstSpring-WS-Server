@@ -25,4 +25,14 @@ ___________________________________________________________________
 | Spring Data JPA | https://docs.spring.io/spring-data/jpa/docs/current/reference/html/ | 
 | HikariCP | https://github.com/brettwooldridge/HikariCP| 
 | H2DB | http://www.h2database.com/html/main.html | 
-| Oracle | https://www.oracle.com/database/index.html |  
+| Oracle | https://www.oracle.com/database/index.html |
+
+#Some git command especially to merge
+| Description | Comands | 
+| ---- | ---- | 
+| Switch to your local development branch | git checkout develop | 
+| Pull down the latest dev branch from remote| git pull origin develop |
+| Switch to your local development master| git checkout master |
+| merge your local branches | git merge develop |
+| Push your changes to remote | git push origin master |
+  
