@@ -46,11 +46,4 @@ HikariCP - https://github.com/brettwooldridge/HikariCP
 H2DB - http://www.h2database.com/html/main.html
 
 Oracle - https://www.oracle.com/database/index.html
-=======
-SpringBoot - https://projects.spring.io/spring-boot/
-
-Spring-ws  - https://spring.io/guides/gs/producing-web-service/
-
-
->>>>>>> 6aff261c122a6b6ce99324bb44e3baa93a6d73c7
 
