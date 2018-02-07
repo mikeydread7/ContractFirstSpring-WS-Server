@@ -1,7 +1,7 @@
 Spring Boot Web Application
-##Using  Spring Boot  /spring-ws + spring profile + H2DB + oracle
+## Using  Spring Boot  /spring-ws + spring profile + H2DB + oracle 
 
-#uses these modules to enhance the service demo with real Database look up
+# uses these modules to enhance the service demo with real Database look up
 ___________________________________________________________________________
 1. [Spring Boot 1.5.10.RELEASE]
 2. [spring-boot-starter-data-jpa]
@@ -16,8 +16,8 @@ ___________________________________________________________________________
 11.[Java 8]
 
 
-##Some Dependency and Links to Documentations
-_____________________________________________
+## Some Dependency and Links to Documentations
+_____________________________________________________
 | Description | Link | 
 | ---- | ---- | 
 | SpringBoot | https://projects.spring.io/spring-boot/ | 
@@ -28,8 +28,8 @@ _____________________________________________
 | Oracle | https://www.oracle.com/database/index.html |
 
 
-#Some git command especially to merge
-_____________________________________
+# Some git command especially to merge
+_______________________________________
 | Description | Commands | 
 | ---- | ---- | 
 | Switch to your local development branch | git checkout develop | 

@@ -1,5 +1,5 @@
 
-##Moral Ethics of a Developer:-  Self govern Developer with a universal regards for mankind.
+## Moral Ethics of a Developer:-  Self govern Developer with a universal regards for mankind.
 * Quotes from Uncle Bob -  Robert C. Martin author of books like Clean Code ,Clean Architecture. 
 * Software should be easy to change the behavior of our hardware. If we make it hard to understand, we have done harm. 
 1. I will not write harmful code. Release any known defect, make it hard to understand by other developers. 
@@ -14,7 +14,7 @@
 * Tools  1.PMD- program mistake Detection   2. SonarJava  Rule  3. JavaAntiPattern. 
 * Take to heart the understanding that my contribution to life as it exist and the writing of software as being the most important thing in today’s world
 
-##The Inspiring Developer and one that cares about the code they write
+## The Inspiring Developer and one that cares about the code they write
 1. Separation of concerns. Divide your application into distinct features with as little overlap in functionality as possible. ... 
 2. Single Responsibility principle. ... 
 3. Principle of Least Knowledge (also known as the Law of Demeter or LoD). ...  
