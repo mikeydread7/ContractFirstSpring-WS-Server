@@ -1,16 +1,11 @@
 package com.example.demo.ws.jpa.repository;
 
-import static org.hibernate.jpa.QueryHints.HINT_FETCH_SIZE;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import javax.persistence.QueryHint;
-
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -30,9 +25,7 @@ public interface CrmJpaRepository extends CrudRepository<CompanyCustomer, Long> 
 
 	@Query("select cc from CompanyCustomer cc where cc.email = :email")
 	Stream<CompanyCustomer> findByEmailReturnStream(@Param("email") String email);
-
-	// @QueryHints(value = @QueryHint(name = HINT_FETCH_SIZE, value = "" +
-	// Integer.MIN_VALUE))
+	
 	@Query("select cc from CompanyCustomer cc where cc.companyProductId = :cmpId")
 	Stream<CompanyCustomer> findByCompanyProductIdReturnStream(@Param("cmpId") Long cmpId);
 

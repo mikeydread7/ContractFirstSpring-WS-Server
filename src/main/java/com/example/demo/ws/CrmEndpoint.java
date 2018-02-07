@@ -1,9 +1,6 @@
 package com.example.demo.ws;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 import org.example.crm.Customer;
 import org.example.crm.GetCustomerByIdRequest;
@@ -21,10 +18,8 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.example.demo.ws.Exception.ServiceFault;
 import com.example.demo.ws.Exception.ServiceFaultException;
-import com.example.demo.ws.domain.CompanyCustomer;
 import com.example.demo.ws.service.CrmJpaService;
 import com.example.demo.ws.service.CrmService;
-import com.example.demo.ws.util.DateFormat;
 
 @Endpoint
 public class CrmEndpoint {

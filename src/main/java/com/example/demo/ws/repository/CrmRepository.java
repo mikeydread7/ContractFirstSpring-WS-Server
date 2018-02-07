@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.example.crm.Customer;
 import org.slf4j.Logger;

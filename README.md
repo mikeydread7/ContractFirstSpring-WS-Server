@@ -46,4 +46,3 @@ HikariCP - https://github.com/brettwooldridge/HikariCP
 H2DB - http://www.h2database.com/html/main.html
 
 Oracle - https://www.oracle.com/database/index.html
-
