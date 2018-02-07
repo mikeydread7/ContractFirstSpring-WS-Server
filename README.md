@@ -17,10 +17,12 @@ ___________________________________________________________________________
 
 
 #Some Dependency and Links to Documentations
-___________________________________________________________________
-|SpringBoot | https://projects.spring.io/spring-boot/|
-|Spring-WS | https://docs.spring.io/spring-ws/docs/2.2.0.RELEASE/reference/htmlsingle/|
-|Spring Data JPA | https://docs.spring.io/spring-data/jpa/docs/current/reference/html/|
-|HikariCP | https://github.com/brettwooldridge/HikariCP|
-|H2DB | http://www.h2database.com/html/main.html|
-|Oracle | https://www.oracle.com/database/index.html|
+___________________________________________________________________ 
+| Description | Link | 
+| ---- | ---- | 
+| SpringBoot | https://projects.spring.io/spring-boot/ | 
+| Spring-WS | https://docs.spring.io/spring-ws/docs/2.2.0.RELEASE/reference/htmlsingle/ | 
+| Spring Data JPA | https://docs.spring.io/spring-data/jpa/docs/current/reference/html/ | 
+| HikariCP | https://github.com/brettwooldridge/HikariCP| 
+| H2DB | http://www.h2database.com/html/main.html | 
+| Oracle | https://www.oracle.com/database/index.html |  
