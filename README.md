@@ -2,7 +2,6 @@ Spring Boot Web Application
 
 ##Using  Spring Boot  /spring-ws + spring profile+ H2DB + oracle
 
-<<<<<<< HEAD
  
 uses these modules to enhance the service demo with real Database look up
 ==========================================================================
