@@ -32,6 +32,7 @@ _____________________________________________________
 _______________________________________
 | Description | Commands | 
 | ---- | ---- | 
+##| Sttus of your branch | git status | 
 | Switch to your local development branch | git checkout develop | 
 | Pull down the latest dev branch from remote| git pull origin develop |
 | Switch to your local development master| git checkout master | 
